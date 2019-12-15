@@ -1,0 +1,68 @@
+body {
+    background-image: url("../images/traintracks.jpg");
+    background-size: cover;
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 1.25em;
+    /* opacity: 0.9; */
+    
+  }
+  
+  h1 {
+    font-size: 3em;
+  }
+  
+  h3 {
+    font-size: 2em;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+
+  .panel-heading {
+      text-align: left;
+  }
+
+  .panel-title {
+      text-align:left;
+  }
+
+  
+
+  .form-group{
+
+    text-align: center;
+  }
+
+
+  #jumbo {
+      background-color: black;
+      color: white;
+  }
+
+
+  #footerBar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin:auto;
+}
+
+   #button {
+ 
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+   
+   }
+
+  thead{
+      background-color: black;
+      color: white;
+      text-align:center;
+  }
+
+  #space{
+      height: 80px;
+  }

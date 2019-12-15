@@ -9,11 +9,16 @@
     <title>Train Arrival Schedule</title>
     
     <!-- CSS/Bootstrap/Reset Stylesheets -->
+
+
      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
      <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
  
+     <!--Import Fonts from Fonts.Google.com-->
+
+     <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display&amp;display=swap" rel="stylesheet">
      
      <!-- Moment.js -->
 
@@ -54,13 +59,13 @@
             The Real Time Train Tracking App
           </h3>
         </div>
-    <main>
+    
 
             <div class="row">
                     <div class="col-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h4 class="panel-title text-center">Current Trains</h4>
+                                <h4 class="panel-title">Current Trains</h4>
                             </div>
                             <div class="panel-body">
                                 <table class="table table-hover" id="trainSchedule">
@@ -86,7 +91,7 @@
                     <div class="col-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h4 class="panel-title text-center">Add Train Below</h4>
+                                <h4 class="panel-title text-left">Add Train Below</h4>
                             </div>
                             <div class="panel-body">
                                 <form>
@@ -106,16 +111,17 @@
                                         <label for="">Frequency (min)</label>
                                         <input type="text" class="form-control" id="freqInput" placeholder="Enter Arrival Frequency - In Minutes">
                                     </div>
-                                    <button type="submit" class="btn btn-primary" id="addBtn">Submit!</button>
+                                    <button type="submit" class="btn btn-primary" id="button">Submit!</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
         
-            </div>
+            </div> 
+            <div class="container" id="space"></div>
  
-            <footer>
+            <footer id="footerBar">
                     <p>Created by Oscar Mateos</p>
                     <p>SMU Full Stack Development Bootcamp - Fall 2019</p>
                     <p>Powered by <a href="https://firebase.google.com/" aria-label="External link to Firebase" rel="noopener noreferrer">Firebase</a>, <a href="https://momentjs.com/" aria-label="External link to Moment.js" rel="noopener noreferrer">Moment.js</a> and <a href="https://jquery.com/" aria-label="External link to jQuery" rel="noopener noreferrer">jQuery</a></p>
