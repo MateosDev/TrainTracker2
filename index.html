@@ -30,6 +30,8 @@
 
      <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
      <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
      <!-- jQuery -->
 
@@ -78,7 +80,7 @@
                                             <th>Minutes Away</th>                                
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="table-body"></tbody>>
         
                                     </tbody>
                                 </table>
@@ -97,21 +99,21 @@
                                 <form>
                                     <div class="form-group">
                                         <label for="">Train Name</label>
-                                        <input type="text" class="form-control" id="trainInput" placeholder="Enter Train Name">
+                                        <input type="text" class="form-control" id="train-name" placeholder="Enter Train Name">
                                     </div>
                                     <div class="form-group">
                                         <label for="">Destination</label>
-                                        <input type="text" class="form-control" id="destinationInput" placeholder="Enter Train Destination">
+                                        <input type="text" class="form-control" id="destination" placeholder="Enter Train Destination">
                                     </div>
                                     <div class="form-group">
                                         <label for="">First Train Time (Military time)</label>
-                                        <input type="text" class="form-control" id="firstTrainInput" placeholder="Enter First Arrival Time HH:mm">
+                                        <input type="text" class="form-control" id="first-time" placeholder="Enter First Arrival Time HH:mm">
                                     </div>
                                     <div class="form-group">
                                         <label for="">Frequency (min)</label>
-                                        <input type="text" class="form-control" id="freqInput" placeholder="Enter Arrival Frequency - In Minutes">
+                                        <input type="text" class="form-control" id="frequency" placeholder="Enter Arrival Frequency - In Minutes">
                                     </div>
-                                    <button type="submit" class="btn btn-primary" id="button">Submit!</button>
+                                    <button type="submit" class="btn btn-primary" id="submit">Submit!</button>
                                 </form>
                             </div>
                         </div>
@@ -128,6 +130,7 @@
                     <p>Hosted on <a href="https://github.com/" aria-label="Check out Github's homepage" rel="noopener noreferrer">Github</a></p>
                 </footer>
             
-                <script type="text/javascript" src="assets/javascript/app.js"></script>
+                <script type="text/javascript" src="./assets/javascript/timelogic.js"></script>
+                
 </body>
 </html>

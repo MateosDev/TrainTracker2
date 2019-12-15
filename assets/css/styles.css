@@ -49,7 +49,7 @@ body {
     margin:auto;
 }
 
-   #button {
+   #submit {
  
         text-align: center;
         display: block;
@@ -65,4 +65,8 @@ body {
 
   #space{
       height: 80px;
+  }
+
+  #table-body{
+    text-align: center;
   }
