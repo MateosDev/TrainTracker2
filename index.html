@@ -6,24 +6,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     
-    <!-- CSS -->
+    <title>Train Arrival Schedule</title>
+    
+    <!-- CSS/Bootstrap/Reset Stylesheets -->
      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
      <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
  
+     
+     <!-- Moment.js -->
+
+
+     <script src="https://cdns.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+
+     <!-- Firebase References -->
+
+     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
      <!-- jQuery -->
+
+
      <script
          src="https://code.jquery.com/jquery-3.4.1.min.js"
          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
          crossorigin="anonymous"></script>
-     <!-- Moment.js -->
-     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-     <!-- Firebase References -->
-     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-    
-    <title>Train Arrival Schedule</title>
+
+    <!--Inline styling for Top Section - Same as on first attempt-->
+     <style>
+         #trainSchedule th,
+            td {
+              display: inline-block;
+              width: 16.575%;
+            }
+          </style>  
 </head>
+
+
 <body>
     <div class="container">
         <!-- Jumbotron -->
@@ -35,8 +56,72 @@
         </div>
     <main>
 
-        <section id="schedule">
-            <h2>Current Trains</h2>
-    </main>    
+            <div class="row">
+                    <div class="col-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title text-center">Current Trains</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-hover" id="trainSchedule">
+                                    <thead>
+                                        <tr>
+                                            <th>Train Name</th>
+                                            <th>Destination</th>
+                                            <th>Frequency (Minutes)</th>
+                                            <th>Next Arrival</th>
+                                            <th>Minutes Away</th>                                
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title text-center">Add Train Below</h4>
+                            </div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="">Train Name</label>
+                                        <input type="text" class="form-control" id="trainInput" placeholder="Enter Train Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Destination</label>
+                                        <input type="text" class="form-control" id="destinationInput" placeholder="Enter Train Destination">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">First Train Time (Military time)</label>
+                                        <input type="text" class="form-control" id="firstTrainInput" placeholder="Enter First Arrival Time HH:mm">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Frequency (min)</label>
+                                        <input type="text" class="form-control" id="freqInput" placeholder="Enter Arrival Frequency - In Minutes">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" id="addBtn">Submit!</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+ 
+            <footer>
+                    <p>Created by Oscar Mateos</p>
+                    <p>SMU Full Stack Development Bootcamp - Fall 2019</p>
+                    <p>Powered by <a href="https://firebase.google.com/" aria-label="External link to Firebase" rel="noopener noreferrer">Firebase</a>, <a href="https://momentjs.com/" aria-label="External link to Moment.js" rel="noopener noreferrer">Moment.js</a> and <a href="https://jquery.com/" aria-label="External link to jQuery" rel="noopener noreferrer">jQuery</a></p>
+                    <p>Hosted on <a href="https://github.com/" aria-label="Check out Github's homepage" rel="noopener noreferrer">Github</a></p>
+                </footer>
+            
+                <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
